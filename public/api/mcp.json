@@ -1,0 +1,11 @@
+{
+  "_mock": "TODO(backend): read-only MCP-server över streamable HTTP på /api/mcp.",
+  "transport": "streamable-http",
+  "endpoint": "/api/mcp",
+  "tools": [
+    { "name": "list_proofs", "description": "List every proof and verdict on this instance." },
+    { "name": "get_proof", "description": "Get one proof with its commitment, report, windows and status.", "arguments": { "id": "string" } },
+    { "name": "list_wishes", "description": "List signed wishes with requester records." },
+    { "name": "verify_commitment", "description": "Check a sha256 against a proof's source commitment.", "arguments": { "id": "string", "sha256": "string" } }
+  ]
+}

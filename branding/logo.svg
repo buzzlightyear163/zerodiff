@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+    <path d="M32 19 H23 V81 H32" stroke="#d9d9d9" stroke-width="3" fill="none" stroke-linecap="square"/>
+    <path d="M68 19 H77 V81 H68" stroke="#d9d9d9" stroke-width="3" fill="none" stroke-linecap="square"/>
+    <defs>
+      <clipPath id="zc"><ellipse cx="50" cy="50" rx="10.600000000000001" ry="21.8"/></clipPath>
+      <mask id="zm" maskUnits="userSpaceOnUse" x="0" y="0" width="100" height="100">
+        <rect width="100" height="100" fill="#fff"/>
+        <line x1="35" y1="76" x2="65" y2="24" stroke="#000" stroke-width="5.4"/>
+      </mask>
+    </defs>
+    <g mask="url(#zm)">
+      <g clip-path="url(#zc)" stroke="#d9d9d9" stroke-width="1.35"><line x1="30" y1="28.60" x2="70" y2="28.60"/><line x1="30" y1="31.70" x2="70" y2="31.70"/><line x1="30" y1="34.80" x2="70" y2="34.80"/><line x1="30" y1="37.90" x2="70" y2="37.90"/><line x1="30" y1="41.00" x2="70" y2="41.00"/><line x1="30" y1="44.10" x2="70" y2="44.10"/><line x1="30" y1="47.20" x2="70" y2="47.20"/><line x1="30" y1="50.30" x2="70" y2="50.30"/><line x1="30" y1="53.40" x2="70" y2="53.40"/><line x1="30" y1="56.50" x2="70" y2="56.50"/><line x1="30" y1="59.60" x2="70" y2="59.60"/><line x1="30" y1="62.70" x2="70" y2="62.70"/><line x1="30" y1="65.80" x2="70" y2="65.80"/><line x1="30" y1="68.90" x2="70" y2="68.90"/><line x1="30" y1="72.00" x2="70" y2="72.00"/></g>
+      <ellipse cx="50" cy="50" rx="11.8" ry="23" stroke="#d9d9d9" stroke-width="2.2" fill="none"/>
+    </g>
+    <line x1="37.2" y1="72.2" x2="62.8" y2="27.8" stroke="#d9d9d9" stroke-width="1.7"/></svg>

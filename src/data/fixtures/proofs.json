@@ -1,0 +1,147 @@
+{
+  "_mock": "TODO(backend): fixture. Ersätt med riktigt API (GET /api/v1/proofs).",
+  "proofs": [
+    {
+      "id": "0001",
+      "status": "calibration",
+      "program": "MemoSq4gqABAXKb96qnH8TysNcWxMyWCqXgDLGmfcHr",
+      "calibration": {
+        "label": "Calibration: SPL Memo v3 rebuilt from its public source, expected PASS. This run proves the engine on a program whose source is already public: it is not a closed program and it is not for sale.",
+        "sourceUrl": "https://github.com/solana-program/memo"
+      },
+      "match": { "matched": 1000, "total": 1000, "realCases": 1000, "realOriginalOk": 7071, "fuzzMatched": 9998, "fuzzTotal": 9998 },
+      "sourceCommitment": "4937b5e236e0a20553140adde722c38b396c891ed76a4c0453a11baeaf9721aa",
+      "reportSha256": "d5429a43e3060052cb9b841757ed13ff646123c1985910664292d5b65b9f9f27",
+      "corpusSha256": "99ac7150ecd65eb331cfc333f22b51eb8e70d19bf51eb5b539e5cb68a4d422ed",
+      "binaries": {
+        "original": "f520eaf096361abbb9639ea4dc3e5388a87b9330e121f476607b87c46ef67954",
+        "candidate": "687ba14a4362397e7dd5168fb7beba1fcb110c665a28bf3599f787df3c5527d5"
+      },
+      "toolchain": "decomp-replayer 1.0.0, litesvm 0.17.0",
+      "memo": { "pending": true },
+      "priceUsdc": null,
+      "wish": null,
+      "sale": null,
+      "passedAt": "2026-11-02T16:03:20.137Z",
+      "windows": [
+        { "kind": "holders", "from": "2026-11-02T16:03:20.137Z", "to": "2026-11-03T16:03:20.137Z" },
+        { "kind": "open", "from": "2026-11-03T16:03:20.137Z", "to": null }
+      ]
+    }
+  ],
+  "verdicts": [
+    {
+      "id": "s04ecafd77b",
+      "verdict": "FAIL",
+      "program": "MemoSq4gqABAXKb96qnH8TysNcWxMyWCqXgDLGmfcHr",
+      "label": "Calibration: the same source with a single log line edited, expected FAIL.",
+      "sourceUrl": "https://github.com/solana-program/memo",
+      "cases": { "matched": 27, "total": 1000 },
+      "fuzz": { "matched": 3900, "total": 9998 },
+      "sourceCommitment": "e0548128c46e22af394181e8501ad746355f5c10839358f28e814f563140cb45",
+      "reportSha256": "061a5e0f34006b2ca1364e87ff6ddd4474adee68f42cba86dc821e0c7d52cfbc",
+      "reason": "7071 of 10998 compared cases differ",
+      "firstDiffs": [
+        {
+          "case": "4Wp4runfxhQAuNpYYmQieP9WpwE4esTh5mNJq6Bufu2d:3",
+          "kind": "real",
+          "accounts": [],
+          "diffs": [
+            {
+              "field": "logs[5]",
+              "original": "Program log: Memo (len 66): \"0xa7b12625ba6bae2666c6da1c07203c38...\"",
+              "candidate": "Program log: Memo (length 66): \"0xa7b12625ba6bae2666c6da1c07203c38...\""
+            }
+          ]
+        },
+        {
+          "case": "4z1RSBvyVZB6ZCwF3dAGG1bQicrUoaCqpo7it2Yw:0",
+          "kind": "real",
+          "accounts": ["HqJF5ndYQwT41WPxvu9P9gJQmzfRaY8FzKEz4Bt14UtF signer writable"],
+          "diffs": [
+            {
+              "field": "logs[2]",
+              "original": "Program log: Memo (len 42): \")stake_v2_interest:sv2ipo_f4543232271947cf\"",
+              "candidate": "Program log: Memo (length 42): \")stake_v2_interest:sv2ipo_f4543232271947cf\""
+            }
+          ]
+        }
+      ],
+      "report": {
+        "format": "decomp-verdict/1",
+        "verdict": "FAIL",
+        "reason": "7071 of 10998 compared cases differ",
+        "program": "MemoSq4gqABAXKb96qnH8TysNcWxMyWCqXgDLGmfcHr",
+        "loader": "BPFLoader2111111111111111111111111111111111",
+        "original_sha256": "f520eaf096361abbb9639ea4dc3e5388a87b9330e121f476607b87c46ef67954",
+        "candidate_sha256": "6588613c4ea4c7239ef4b5d373f4393476da8c1060686408680bbd87e0c61b00",
+        "corpus_sha256": "99ac7150ecd65eb331cfc333f22b51eb8e70d19bf51eb5b539e5cb68a4d422ed",
+        "source_sha256": "e0548128c46e22af394181e8501ad746355f5c10839358f28e814f563140cb45",
+        "cases_total": 11000,
+        "compared": 10998,
+        "budget_bound": 2,
+        "matched": 3927,
+        "real_total": 1000,
+        "real_matched": 27,
+        "fuzz_total": 9998,
+        "fuzz_matched": 3900,
+        "ok_path_original": 7071,
+        "ok_path_minimum": 100,
+        "mismatches_total": 7071,
+        "rules": {
+          "replayer": "decomp-replayer 1.0.0",
+          "litesvm": "0.17.0",
+          "compared": "result and error, logs line by line, return data, lamports owner and data of every writable account",
+          "stripped": "lines 'Program <id> consumed N of M compute units'; cases where the original exhausts its compute budget are counted as budget_bound and not compared"
+        }
+      }
+    },
+    {
+      "id": "s080b16d3e3",
+      "verdict": "FAIL",
+      "program": "MemoSq4gqABAXKb96qnH8TysNcWxMyWCqXgDLGmfcHr",
+      "label": "Calibration, first run (superseded): one fuzzed memo with an unusual Unicode character was escaped differently. The rerun is the PASS.",
+      "sourceUrl": "https://github.com/solana-program/memo",
+      "cases": { "matched": 1000, "total": 1000 },
+      "fuzz": { "matched": 9997, "total": 9998 },
+      "sourceCommitment": "6574efd2545e5d430be3f85bb64ce3dcd716eb74d43e480deb9efdb6c5cf2c4b",
+      "reportSha256": "422605065375cb0316c1d36f35dda575b67ee57a1277649109aadfa2b1cc8e08",
+      "reason": "1 of 10998 compared cases differ",
+      "firstDiffs": [
+        {
+          "case": "fuzz:22:2rQ3BPKRSA7H224utMTpvqwLBb148A21sKJ8:5",
+          "kind": "fuzz",
+          "accounts": [],
+          "diffs": [
+            {
+              "field": "logs[5]",
+              "original": "Program log: Memo (len 58): \"jupiter-bfa62c04:buyback\\u{16}\\u{61d}\\u{6}k\"",
+              "candidate": "Program log: Memo (len 58): \"jupiter-bfa62c04:buyback\\u{16}؝\\u{6}k\""
+            }
+          ]
+        }
+      ],
+      "report": {
+        "format": "decomp-verdict/1",
+        "verdict": "FAIL",
+        "reason": "1 of 10998 compared cases differ",
+        "program": "MemoSq4gqABAXKb96qnH8TysNcWxMyWCqXgDLGmfcHr",
+        "original_sha256": "f520eaf096361abbb9639ea4dc3e5388a87b9330e121f476607b87c46ef67954",
+        "candidate_sha256": "dafe4811429f87ec4c43c8eb79ef16dee5f20e14dcfeffa2e073cd1d3f52b6f9",
+        "corpus_sha256": "99ac7150ecd65eb331cfc333f22b51eb8e70d19bf51eb5b539e5cb68a4d422ed",
+        "source_sha256": "6574efd2545e5d430be3f85bb64ce3dcd716eb74d43e480deb9efdb6c5cf2c4b",
+        "cases_total": 11000,
+        "compared": 10998,
+        "budget_bound": 2,
+        "matched": 10997,
+        "real_total": 1000,
+        "real_matched": 1000,
+        "fuzz_total": 9998,
+        "fuzz_matched": 9997,
+        "ok_path_original": 7071,
+        "ok_path_minimum": 100,
+        "mismatches_total": 1
+      }
+    }
+  ]
+}

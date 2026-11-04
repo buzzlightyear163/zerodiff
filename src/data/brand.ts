@@ -7,7 +7,7 @@ export const BRAND = {
   name: env.VITE_BRAND_NAME || 'Zero Diff',
   ticker: env.VITE_TICKER || 'ZERODIFF',
   /** Token-mint (pump.fun). Tom sträng döljer token-pillen. */
-  token: env.VITE_TOKEN_CA ?? 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXpump',
+  token: env.VITE_TOKEN_CA ?? '8MYvD5S3tTBiEYMCwWS94YMUaMRtDsh7CneCvvNwpump',
   xUrl: env.VITE_X_URL || 'https://x.com/zerodiffsol',
   siteUrl: env.VITE_SITE_URL || 'https://zerodiff.fun',
   tagline: 'Zero diff, full payout. Byte-exact rebuilds of closed Solana programs.',

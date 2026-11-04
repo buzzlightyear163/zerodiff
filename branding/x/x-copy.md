@@ -147,3 +147,141 @@ The other half is bought into $ZERODIFF and burned.
 
 That's what the fund is for: a proof that diffs to zero shouldn't sit unsold forever.
 ```
+
+
+---
+
+# Utan Premium (max 280 tecken per inlägg, resten som svar i tråd)
+
+## Pre-launch
+1. Reveal – huvudinlägg (272 tecken)
+```text
+You sign for Solana programs you can't read. Closed bytecode, real funds.
+
+$ZERODIFF pays to open them up: rebuild one as Rust source, a machine replays mainnet against it, and if nothing differs you sell the source.
+
+Launching on pump.fun [tid].
+```
+Svar (250 tecken)
+```text
+No human decides. The judge compiles your crate itself, runs it beside the original on the same inputs and compares every case. One byte off is a FAIL.
+
+A PASS goes public as a proof ticket. The source stays encrypted until someone pays to unlock it.
+```
+
+2. Inuti – huvudinlägg (244 tecken)
+```text
+A crate lands. The judge builds it on its own machine, no secrets, ten minute cap.
+
+Then it runs your binary beside the one on mainnet and feeds both the exact same instructions: real ones from recent mainnet transactions, then fuzzed variants.
+```
+Svar (256 tecken)
+```text
+For every case it checks:
+- result and exact error code
+- every writable account byte
+- return data
+- every log line
+- CPI calls and their order
+
+One difference and the report shows where. Zero, and the crate becomes a ticket with the hunter's price on it.
+```
+
+3. Varför nu – huvudinlägg (268 tecken)
+```text
+[tid]. pump.fun.
+
+Rebuilding closed code keeps getting easier. Proving a rebuild is exact never had a referee.
+
+Zero Diff ends it in a verdict with hashes that anyone can re-run.
+
+The CA and the link will only ever be posted from this account.
+```
+Svar (130 tecken)
+```text
+Wishes cost nothing to sign. Hunters price their own work from 25 USDC. Buyers pay only for a source that already matched mainnet.
+```
+
+## Launch
+Huvudinlägg (219 tecken)
+```text
+$ZERODIFF is live.
+
+A bounty market for closed Solana programs. Rebuild one as Rust source, the judge replays mainnet against both binaries, and if the diff is zero you sell that source in USDC.
+
+[länk]
+```
+Svar 1 – CA (101 tecken)
+```text
+CA: [CA]
+
+This is the only contract. Anything else is a copy.
+```
+Svar 2 (277 tecken)
+```text
+How it works:
+→ Wishes: name a program id and your price. Signed message, no deposit.
+→ Hunt: submit your crate, hashed and encrypted in your browser.
+→ The judge: pinned toolchain, real and fuzzed instructions, PASS or FAIL.
+→ Proof wall: every verdict and its commitment.
+```
+Svar 3 (194 tecken)
+```text
+→ Verifier: re-run any verdict yourself.
+
+92% of every unlock goes to the hunter at once. 8% is bought into $ZERODIFF and burned.
+
+The wish signer gets the first 7 days on a proof made from it.
+```
+Svar 4 (213 tecken)
+```text
+Calibration comes first: the judge has to PASS a program whose source is already public and FAIL a copy with one line changed.
+
+How a verdict is decided: [länk]/docs/judge
+
+Zero diff, full payout.
+```
+
+## Efter launch
+1. Första timmarna (200 tecken) – samma som Premium
+```text
+Zero Diff on pump.fun
+
+CA: [CA]
+
+Rebuild what's closed. Prove it matches mainnet byte for byte. Sell the source in USDC.
+
+[länk]
+```
+
+2. Pay to decrypt – huvudinlägg (191 tecken)
+```text
+Pay to decrypt, explained.
+
+When the judge passes a crate, the proof goes public right away: program, match count, report hash and the sha256 of the source. The source itself stays encrypted.
+```
+Svar (258 tecken)
+```text
+A buyer pays the hunter's price in USDC. The key is resealed to a one-time key made in the buyer's browser, which decrypts the archive and checks it against the hash on the ticket.
+
+The hunter gets 92% in the same run.
+
+[länk]/docs/unlocking
+```
+
+3. Narrativ + milstolpe – huvudinlägg (184 tecken)
+```text
+[X] holders.
+
+Not every proof finds a buyer. Zero Diff still pays the hunter.
+
+Every Monday, half of the vault above a small SOL reserve is swapped to USDC and sent to the orphan fund.
+```
+Svar (267 tecken)
+```text
+The fund buys the oldest unsold proofs past all their windows, at the hunter's price or 250 USDC, whichever is lower, and publishes the source for everyone.
+
+The other half is bought into $ZERODIFF and burned.
+
+A proof that diffs to zero shouldn't sit unsold forever.
+```
